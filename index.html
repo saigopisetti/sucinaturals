@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suci Naturals - Pure Beauty</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/logoo.png" alt="Suci Naturals Logo" class="me-3">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#ingredients">Ingredients</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+      <div class="cart-icon position-relative ms-4" onclick="showCartModal()">
+        <i class="bi bi-cart-fill fs-4 text-white"></i>
+        <span class="cart-count" id="cart-count">0</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <h1>Experience the Purity of Nature</h1>
+  <p>Beauty products made with love, turmeric, herbs, and eco-conscious ingredients</p>
+  <a href="#products" class="btn btn-buy btn-lg mt-4">Explore Collection</a>
+</section>
+
+<section id="products" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Our Products</h2>
+    <div class="row g-4" id="product-list"></div>
+    <div class="text-center mt-4">
+      <button id="seeMoreBtn" class="btn btn-buy btn-lg">See More</button>
+      <button id="showLessBtn" class="btn btn-outline-secondary btn-lg ms-2">Show Less</button>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="reviews" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2>Customer Testimonials</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“I absolutely love these products! My skin has never felt better.”</p>
+          <footer class="blockquote-footer">Priya R.</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“Natural ingredients that really work. Highly recommended!”</p>
+          <footer class="blockquote-footer">Aarav M.</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p class="mb-0">“Finally found a brand I trust. My skin glows and feels nourished.”</p>
+          <footer class="blockquote-footer">Sneha D.</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ingredients" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-purple">🌸 Ingredients Glossary 🌸</h2>
+      <p class="text-muted">Nature’s finest elements, carefully chosen for your skin’s radiance.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+          <h5 class="text-purple"><span class="me-2">🌿</span>Turmeric</h5>
+          <p class="text-muted mb-0">Brightens and tones skin with natural anti-inflammatory properties.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+          <h5 class="text-purple"><span class="me-2">🌿</span>Neem</h5>
+          <p class="text-muted mb-0">Fights acne, bacteria, and purifies the skin deeply.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+          <h5 class="text-purple"><span class="me-2">🌿</span>Aloe Vera</h5>
+          <p class="text-muted mb-0">Soothes, cools, and hydrates even sensitive skin.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+          <h5 class="text-purple"><span class="me-2">🌹</span>Rose Petals</h5>
+          <p class="text-muted mb-0">Refresh, soften, and balance the skin's pH.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+          <h5 class="text-purple"><span class="me-2">🌳</span>Sandalwood</h5>
+          <p class="text-muted mb-0">Cools, clears, and adds a natural glow to your skin.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+          <h5 class="text-purple"><span class="me-2">🍯</span>Honey</h5>
+          <p class="text-muted mb-0">Moisturizes and helps heal damaged skin.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="p-4 border rounded-4 shadow-sm h-100 bg-white">
+          <h5 class="text-purple"><span class="me-2">🍋</span>Lemon Extract</h5>
+          <p class="text-muted mb-0">Naturally lightens pigmentation and boosts glow.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ 
+
+<section id="blog" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2>Beauty Tips & Blog</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <h5>✨ 5 Natural Ways to Glow</h5>
+        <p>Discover how ingredients like turmeric and aloe vera can help your skin shine naturally.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>🧖‍♀️ DIY Face Mask Recipes</h5>
+        <p>Simple homemade recipes to give your skin some natural TLC and relaxation.</p>
+      </div>
+      <div class="col-md-4">
+        <h5>🌱 Why Go Natural?</h5>
+        <p>Learn the benefits of switching to clean and green beauty products for long-term wellness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-5 about-section text-white">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">🌿 About Us</h2>
+    <p class="lead about-text">
+      At <strong>Suci Naturals</strong>, we believe in the power of nature. Our mission is to create <span class="highlight">clean</span>, <span class="highlight">effective</span>, and <span class="highlight">beautiful</span> skincare using only the earth’s purest ingredients.
+    </p>
+    <p class="mt-4">
+      From <strong>✨ turmeric</strong> and <strong>🌿 neem</strong> to <strong>🌹 rose petals</strong> and more, each handcrafted product is designed to <em>nourish your skin naturally</em> while honoring ancient wellness traditions.
+    </p>
+    <div class="about-icons mt-4 d-flex justify-content-center gap-4 flex-wrap">
+      <div><i class="bi bi-droplet-half fs-1"></i><p>Hydration</p></div>
+      <div><i class="bi bi-stars fs-1"></i><p>Glow Boosting</p></div>
+      <div><i class="bi bi-heart-fill fs-1"></i><p>Made with Love</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="py-5">
+  <div class="container text-center">
+    <h2>Contact Us</h2>
+    <p><i class="bi bi-telephone-fill"></i> <strong>Phone:</strong> +91 90000 99999</p>
+    <p><i class="bi bi-envelope-fill"></i> <strong>Email:</strong> hello@sucinaturals.com</p>
+    <p><i class="bi bi-instagram"></i> <strong>Instagram:</strong> @sucinaturals</p>
+  </div>
+</section>
+
+
+<footer class="text-center py-4">
+  <p>&copy; 2025 Suci Naturals. All rights reserved.</p>
+</footer>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="cart-items"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const productList = document.getElementById("product-list");
+  const seeMoreBtn = document.getElementById("seeMoreBtn");
+  const showLessBtn = document.getElementById("showLessBtn");
+  const cartItemsContainer = document.getElementById("cart-items");
+  const cartCount = document.getElementById("cart-count");
+
+  const totalProducts = 67;
+  const initialVisible = 8;
+  let visibleCount = initialVisible;
+
+  const productData = Array.from({ length: totalProducts }, (_, i) => ({
+    id: i + 1,
+    name: `Herbal Glow Cream ${i + 1}`,
+    price: (12 + (i % 10)).toFixed(2),
+    image: `images/product${i + 1}.jpg`,
+  }));
+
+  let cart = [];
+
+  function renderProducts(count) {
+    productList.innerHTML = "";
+    for (let i = 0; i < count; i++) {
+      const { name, price, image } = productData[i];
+      const col = document.createElement("div");
+      col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+      col.innerHTML = `
+        <div class="product-card text-center">
+          <img src="${image}" class="img-fluid rounded mb-3" alt="${name}">
+          <h6>${name}</h6>
+          <p class="fw-bold">$${price}</p>
+          <button class="btn btn-buy" onclick='addToCart(${JSON.stringify(productData[i])})'>Add to Cart</button>
+        </div>
+      `;
+      productList.appendChild(col);
+    }
+  }
+
+  function addToCart(product) {
+    cart.push(product);
+    updateCartDisplay();
+  }
+
+  function updateCartDisplay() {
+  cartCount.textContent = cart.length;
+
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+    return;
+  }
+
+  cartItemsContainer.innerHTML = cart.map((p, index) => `
+    <div class="d-flex align-items-center border-bottom py-3">
+      <img src="${p.image}" alt="${p.name}" width="60" class="me-3 rounded">
+      <div class="flex-grow-1">
+        <h6 class="mb-1">${p.name}</h6>
+        <small class="text-muted">$${p.price}</small>
+      </div>
+      <button class="btn btn-sm btn-outline-danger" onclick="removeFromCart(${index})">
+        <i class="bi bi-trash"></i>
+      </button>
+    </div>
+  `).join('');
+}
+ 
+function removeFromCart(index) {
+  cart.splice(index, 1); // remove 1 item at the specified index
+  updateCartDisplay();
+}
+
+
+  function showCartModal() {
+    new bootstrap.Modal(document.getElementById('cartModal')).show();
+  }
+
+  seeMoreBtn.addEventListener("click", () => {
+    visibleCount = totalProducts;
+    renderProducts(visibleCount);
+  });
+
+  showLessBtn.addEventListener("click", () => {
+    visibleCount = initialVisible;
+    renderProducts(visibleCount);
+  });
+
+  renderProducts(initialVisible);
+</script>
+
+</body>
+</html>
