@@ -27,10 +27,11 @@
         <li class="nav-item"><a class="nav-link" href="#ingredients">Ingredients</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
       </ul>
-      <div class="cart-icon position-relative ms-4" onclick="showCartModal()">
-        <i class="bi bi-cart-fill fs-4 text-white"></i>
-        <span class="cart-count" id="cart-count">0</span>
+      <div class="cart-icon position-relative ms-4 d-flex align-items-center">
+        <i class="bi bi-cart-fill fs-4 "></i>
+        <span class="cart-count ms-2" id="cart-count">0</span>
       </div>
+      
     </div>
   </div>
 </nav>
@@ -291,6 +292,21 @@ function removeFromCart(index) {
   });
 
   renderProducts(initialVisible);
+
+
+  // Automatically collapse the navbar after clicking a link
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const navbarCollapse = document.getElementById('navbarNav');
+    const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse, {
+      toggle: false // Prevent toggling, just collapse
+    });
+    bootstrapCollapse.hide(); // Close the navbar after clicking a link
+  });
+});
+
 </script>
 
 </body>

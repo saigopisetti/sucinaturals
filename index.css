@@ -19,7 +19,7 @@ body {
   color: #fff;
 }
 .navbar-brand img {
-  width: 100px;
+  width: 200px;
   height: auto;
 }
 .nav-link {
@@ -71,6 +71,7 @@ body {
 
 .cart-icon {
   cursor: pointer;
+  color: #fff;
 }
 .cart-count {
   background: #b700ff;
@@ -182,5 +183,57 @@ footer {
 .about-icons p {
   margin-top: 10px;
   font-weight: 500;
+}
+
+
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 70px;
+  }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    margin-top: -50px;
+    width: 140px;
+  }
+  .navbar-toggler {
+    margin-top: -57px;
+    color: #fff;
+    background-color: #fff;
+  }
+  .hero h1 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .hero p {
+    font-size: 12px;
+  }
+  .nav-link {
+    padding-left:20px ;
+     width: 250px;
+     background-color: rgb(255, 255, 255);
+     color: #000000 !important;
+     margin-top: 6px;
+  }
+  .cart-count {
+    background: #000000;
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: relative;
+    top: -8px;
+    right: 4px;
+  }
+  .cart-icon {
+    color: #000000;
+  }
+  .navbar-nav {
+    margin-top: -40px;
+  }
+
 }
 
